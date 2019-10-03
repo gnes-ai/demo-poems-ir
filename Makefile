@@ -9,9 +9,9 @@ push:
 	docker push gnes/demo-poem:client
 pull:
 	docker pull gnes/gnes:latest-alpine && \
-	docker pull gnes/demo-poem:encode && \
-	docker pull gnes/demo-poem:vector-index && \
-	docker pull gnes/demo-poem:client
+	docker pull gnes/demo:poem-encode && \
+	docker pull gnes/demo:poem-vector-index && \
+	docker pull gnes/demo:poem-client
 clean_data: ; rm -rf .cache && mkdir -p .cache
 clean: ; docker stack rm my-gnes
 wait: ; @printf "sleep 15s for docker recycling network resources...\n"; sleep 15
